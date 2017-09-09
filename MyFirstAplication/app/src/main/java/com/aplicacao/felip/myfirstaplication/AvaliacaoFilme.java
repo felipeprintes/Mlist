@@ -1,0 +1,15 @@
+package com.aplicacao.felip.myfirstaplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class AvaliacaoFilme extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_avaliacao_filme);
+
+
+    }
+}
