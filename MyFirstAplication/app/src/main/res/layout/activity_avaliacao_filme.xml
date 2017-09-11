@@ -43,10 +43,8 @@
             android:layout_height="wrap_content"
             android:text="Avaliar"
             android:fontFamily="sans-serif-condensed"
-            android:textSize="30dp"/>
-
-
-
+            android:textSize="30dp"
+            android:id="@+id/botao_avaliar"/>
 
     </LinearLayout>
 </ScrollView>
