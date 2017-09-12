@@ -8,9 +8,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.mlist.felip.mlist.modelo.Filme;
+import com.mlist.felip.mlist.modeloDb.FilmeModeloBD;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    private String[] myVetorAlunos;
     private ListView minhaLista;
     private Button meuBotao;
 
@@ -20,10 +24,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myVetorAlunos = new String[]{"felipe", "fabio", "gustavo", "felipe", "fabio", "gustavo",
-                "felipe", "fabio", "gustavo", "felipe", "fabio", "gustavo", "felipe", "fabio", "gustavo", "felipe", "fabio"};
+        FilmeModeloBD modelo = new FilmeModeloBD(this);
+        List<Filme> filmes = modelo.buscaFilmes();
+        modelo.close();
+
         minhaLista = (ListView) findViewById(R.id.minha_lista);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, myVetorAlunos);
+        ArrayAdapter<Filme> adapter = new ArrayAdapter<Filme>(this,android.R.layout.simple_list_item_1, filmes);
         minhaLista.setAdapter(adapter);
 
         meuBotao = (Button) findViewById(R.id.meu_botao_formulario);

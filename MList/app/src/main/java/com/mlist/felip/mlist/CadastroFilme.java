@@ -41,6 +41,7 @@ public class CadastroFilme extends AppCompatActivity {
                 Filme filme = ajudante.pegaFilme();
                 FilmeModeloBD modelo = new FilmeModeloBD(this);
                 modelo.insere(filme);
+                modelo.close();
                 Toast.makeText(CadastroFilme.this, "O filme " + filme.getNome() + " foi salvo", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
