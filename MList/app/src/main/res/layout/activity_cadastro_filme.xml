@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha o seu filme favorito"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do filme"
+        android:textSize="40sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/formulario_nome_filme"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gênero"
+        android:textSize="40sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/formulario_genereno_filme"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:max="10"
+        android:id="@+id/avaliacao_nota"/>
+
+
+
+</LinearLayout>
