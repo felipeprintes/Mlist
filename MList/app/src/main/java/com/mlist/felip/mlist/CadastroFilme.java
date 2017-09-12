@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.mlist.felip.mlist.modelo.Filme;
+import com.mlist.felip.mlist.modeloDb.FilmeModeloBD;
 
 public class CadastroFilme extends AppCompatActivity {
 
@@ -38,6 +39,8 @@ public class CadastroFilme extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.menu_formulario_ok:
                 Filme filme = ajudante.pegaFilme();
+                FilmeModeloBD modelo = new FilmeModeloBD(this);
+                modelo.insere(filme);
                 Toast.makeText(CadastroFilme.this, "O filme " + filme.getNome() + " foi salvo", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
