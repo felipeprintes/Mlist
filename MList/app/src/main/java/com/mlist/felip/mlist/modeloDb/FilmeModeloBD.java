@@ -69,4 +69,12 @@ public class FilmeModeloBD extends SQLiteOpenHelper {
         return filmes;
     }
 
+    public void deleta() {
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        String[] params = {};
+        db.delete("Lista", "id = ?", params);
+
+    }
 }

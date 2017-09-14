@@ -9,9 +9,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escolha o seu filme favorito"
+        android:text="Escolha o filme"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
-        android:layout_gravity="center"/>
+        android:gravity="center"/>
 
     <EditText
         android:layout_width="match_parent"
