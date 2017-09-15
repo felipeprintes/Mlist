@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 Filme filme = (Filme) minhaLista.getItemAtPosition(info.position);
 
                 FilmeModeloBD modelo =  new FilmeModeloBD(MainActivity.this);
-                modelo.deleta();
+                modelo.deleta(filme);
                 modelo.close();
 
-                Toast.makeText(MainActivity.this, "O filme será deletado", Toast.LENGTH_SHORT).show();
+                carregaLista();
                 return false;
             }
         });

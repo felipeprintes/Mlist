@@ -39,6 +39,8 @@
         android:max="10"
         android:id="@+id/avaliacao_nota"/>
 
+    <
+
 
 
 </LinearLayout>

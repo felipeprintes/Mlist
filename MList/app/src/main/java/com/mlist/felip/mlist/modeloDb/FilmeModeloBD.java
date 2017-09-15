@@ -16,6 +16,7 @@ import java.util.List;
  */
 
 public class FilmeModeloBD extends SQLiteOpenHelper {
+
     public FilmeModeloBD(Context context) {
         super(context, "Lista", null, 1);
     }
@@ -69,12 +70,10 @@ public class FilmeModeloBD extends SQLiteOpenHelper {
         return filmes;
     }
 
-    public void deleta() {
+    public void deleta(Filme filme) {
 
         SQLiteDatabase db = getWritableDatabase();
-
-        String[] params = {};
+        String[] params = {filme.getId().toString()};
         db.delete("Lista", "id = ?", params);
-
     }
 }
