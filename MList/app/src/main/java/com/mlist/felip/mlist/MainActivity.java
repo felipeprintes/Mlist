@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View item, int position, long id) {
                 Filme filme = (Filme) minhaLista.getItemAtPosition(position);
-                Toast.makeText(MainActivity.this, "Filme " + filme.getNome()+ "clicado", Toast.LENGTH_SHORT).show();
+                Intent intentVaiproFormulario = new Intent(MainActivity.this, CadastroFilme.class);
+                startActivity(intentVaiproFormulario);
             }
         });
 
