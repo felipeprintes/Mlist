@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         carregaLista();
 
+        minhaLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View item, int position, long id) {
+                Filme filme = (Filme) minhaLista.getItemAtPosition(position);
+                Toast.makeText(MainActivity.this, "Filme " + filme.getNome()+ "clicado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         meuBotao = (Button) findViewById(R.id.meu_botao_formulario);
         meuBotao.setOnClickListener(new View.OnClickListener() {
             @Override
